@@ -1,7 +1,7 @@
 # Arabic Sentence Segmentation Shared Task 2026
 The Arabic Sentence Segmentation Shared Task 2026 will take place at the Fourth Arabic Natural Language Processing Conference (ArabicNLP 2026) at EMNLP 2026.
 
-**Click here to [register for the shared task]()!**
+**Click here to [register for the shared task](https://forms.gle/erSoDa3zX4tPbMDi6)!**
 
 
 ## Task Description
