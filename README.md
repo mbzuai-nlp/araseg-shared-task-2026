@@ -30,7 +30,7 @@ With four subtasks and two tracks, the task results in **eight** possible combin
 
 
 ## Evaluation
-We define Sentence segmentation as a **binary** token classification task. We use the following metrics:
+We define sentence segmentation as a **binary** token classification task. We use the following metrics:
 
 * **Boundary Precision (P):** The percentage of predicted sentence boundaries that match a reference sentence boundary. Higher precision means fewer false boundary insertions.
 * **Boundary Recall (R):** The percentage of reference sentence boundaries that are correctly predicted. Higher recall means fewer missed sentence boundaries.
@@ -54,12 +54,46 @@ pip install -r requirements.txt
 ## Running the Evaluation
 
 To evaluate your predictions, use the provided evaluation script. The script requires three arguments:
-* `--output`: Path to your output CSV file containing predictions 
-* `--task`: The data split to evaluate on (`Dev` or `Test`).
-* `--split`: The task type ().
+* `--predictions`: Path to your output CSV file containing predictions 
+* `--task`: The data split to evaluate on (`dev` or `test`).
+* `--split`: The segmentation task type (`PA` for Paragraph-Aware, `NP` for No-Paragraph, `NoPnx-PA` for No-Punctuation Paragraph-Aware, and `NoPnx-NP` for No-Punctuation No-Paragraph).
 
 
-The evaluation results are saved as:
-```bash
-{task_name}_{split}.json
+To evaluate your system's output, you would need to run:
+``
+
+Example usage:
+``
+
+### Prediction Output CSV Format
+Your output CSV file should have the following columns:
+* `Document ID`: The unique identifier for each document.
+* `Prediction`: Your predicted segmentation boundaries for each as token in the document. This **must** be represented as a **binary sequence of 0s and 1s** (e.g., 0010 for a document of 4 tokens).
+
+**Example**:
+| Document ID | Prediction |
+|-------------|------------|
+| doc_00f88da2b078        | 00111001001000001011          |
+| doc_4f96c619afba        | 011010111010101         |
+| ...         | ...        |
+
+Make sure the IDs in your output file match exactly those in the provided split (dev or test) for the chosen task.
+
+### Example Output
+After running the evaluation script, you will see output similar to the following in your terminal:
 ```
+```
+Each metric reflects the performance of your predictions on the selected split and task.
+
+## Organizers
+[Mohammed Elkholy]()
+
+[Khalid Elmadani](https://khalid-elmadani.github.io/)
+
+[Nizar Habash](https://www.nizarhabash.com/)
+
+[Bashar Alhafni](https://www.basharalhafni.com/)
+
+## License
+
+This repo is available under the MIT license. See the [LICENSE](LICENSE) for more info.
