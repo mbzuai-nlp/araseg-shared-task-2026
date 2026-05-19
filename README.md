@@ -60,10 +60,10 @@ To evaluate your predictions, use the provided evaluation script. The script req
 
 
 To evaluate your system's output, you would need to run:
-``
+`python scripts/eval.py --predictions /path/to/prediction_csv --task [PA|NP|NoPNX-PA|NoPNX-NP] --split [dev|test]` 
 
 Example usage:
-``
+`python scripts/eval.py ` 
 
 ### Prediction Output CSV Format
 Your output CSV file should have the following columns:
