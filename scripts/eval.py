@@ -8,8 +8,8 @@ from datasets import load_dataset
 from sklearn.metrics import f1_score, precision_score, recall_score
 
 TASK_TO_DATASET_NAMES: FrozenSet[str] = {
-    "Pnx-PA": "MBZUAI/AraSeg-2026-Shared-Task-Pnx-PA",
-    "Pnx-NP": "MBZUAI/AraSeg-2026-Shared-Task-Pnx-NP",
+    "PA": "MBZUAI/AraSeg-2026-Shared-Task-PA",
+    "NP": "MBZUAI/AraSeg-2026-Shared-Task-NP",
     "NoPnx-PA": "MBZUAI/AraSeg-2026-Shared-Task-NoPnx-PA",
     "NoPnx-NP": "MBZUAI/AraSeg-2026-Shared-Task-NoPnx-NP"
 }
@@ -61,22 +61,19 @@ def compute_metrics(gold_documents: Dict[str, List[int]], predicted_documents: D
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument("--task-name", type=str, required=True, choices=TASK_TO_DATASET_NAMES.keys(), help="The name of the task to evaluate")
-    parser.add_argument("--prediction-file-path", type=str, required=True, help="The path to the prediction file")
-    parser.add_argument("--output-file-path", type=str, required=True, help="The path to the output file")
+    parser.add_argument("--task", type=str, required=True, choices=TASK_TO_DATASET_NAMES.keys(), help="The name of the task to evaluate")
+    parser.add_argument("--predictions", type=str, required=True, help="The path to the prediction file")
     parser.add_argument("--split", type=str, required=False, default="dev", choices=SPLITS, help="The split to evaluate on")
     return parser.parse_args()
 
 if __name__ == "__main__":
     args = parse_args()
-    task_name = args.task_name
-    prediction_file_path = args.prediction_file_path
-    output_file_path = args.output_file_path
+    task_name = args.task
+    prediction_file_path = args.predictions
     split = args.split
 
     print("-"*100)
     print(f"Prediction file path: {prediction_file_path}")
-    print(f"Output file path: {output_file_path}")
     print(f"Task name: {task_name}")
     print(f"Split: {split}")
     print("-"*100)
@@ -95,7 +92,4 @@ if __name__ == "__main__":
     }
     print(f"Metrics: {metrics}")
     print("-"*100)
-    output_file_name = f"{task_name}_{split}.json"
-    with open(f"{output_file_path}/{output_file_name}", "w") as f:
-        json.dump(metrics, f, indent=4)
-    print(f"Metrics saved to {output_file_path}/{output_file_name}")
+
