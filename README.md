@@ -12,8 +12,8 @@ The goal of this shared task is to segment Arabic documents into sentences. Give
 
 * **[PA](https://huggingface.co/datasets/MBZUAI/AraSeg-2026-Shared-Task-PA)**: the Paragraph-Aware (PA) variant of the corpus where paragraph boundaries are provided.
 * **[NoPnx-PA](https://huggingface.co/datasets/MBZUAI/AraSeg-2026-Shared-Task-NoPnx-PA)**: the No-Punctuation Paragraph-Aware (NoPnx-PA) variant of the corpus where punctuation is removed but paragraph boundaries are retained.
-* **[NP](https://huggingface.co/datasets/MBZUAI/AraSeg-2026-Shared-Task-NP)**:the No-Paragraph (NP) variant of the corpus where paragraph boundaries are removed.
-* **[NoPnx-NP](https://huggingface.co/datasets/MBZUAI/AraSeg-2026-Shared-Task-NoPnx-NP)**:the No-Punctuation No-Paragraph (NoPnx-NP) variant of the corpus where punctuation and paragraph boundaries are removed.
+* **[NP](https://huggingface.co/datasets/MBZUAI/AraSeg-2026-Shared-Task-NP)**: the No-Paragraph (NP) variant of the corpus where paragraph boundaries are removed.
+* **[NoPnx-NP](https://huggingface.co/datasets/MBZUAI/AraSeg-2026-Shared-Task-NoPnx-NP)**: the No-Punctuation No-Paragraph (NoPnx-NP) variant of the corpus where punctuation and paragraph boundaries are removed.
 
 ## Shared Task Subtasks and Tracks
 The shared task features **four** subtasks, each corresponding to an AraSeg corpus variant, with **two** tracks. The tracks impose different resource constraints. Participants can compete in one or more subtask and track.
