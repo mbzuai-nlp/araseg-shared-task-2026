@@ -34,7 +34,7 @@ def load_predictions(prediction_file_path: str) -> Dict[str, List[int]]:
     docs = {}
     for index, row in df.iterrows():
         doc_id = row["Document ID"]
-        labels = convert_binary_string_to_list(row["Predictions"])
+        labels = convert_binary_string_to_list(row["Prediction"])
         docs[doc_id] = labels
     return docs
 
