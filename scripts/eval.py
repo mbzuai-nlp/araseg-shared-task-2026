@@ -72,12 +72,11 @@ if __name__ == "__main__":
     prediction_file_path = args.predictions
     split = args.split
 
-    print("-"*100)
+    print("-"*20)
     print(f"Prediction file path: {prediction_file_path}")
     print(f"Task name: {task_name}")
     print(f"Split: {split}")
-    print("-"*100)
-    print(f"Evaluating {task_name} on {split} split")
+    print("-"*20)
 
     # load data
     data = load_data_from_hf(task_name, split)
@@ -90,6 +89,9 @@ if __name__ == "__main__":
         "macro_recall": metrics["macro_recall"].item(),
         "macro_f1": metrics["macro_f1"].item()
     }
-    print(f"Metrics: {metrics}")
-    print("-"*100)
+    print(f'Precision: {metrics["macro_recall"]*100:.4}')
+    print(f'Recall:    {metrics["macro_precision"]*100:.4}')
+    print(f'F1:        {metrics["macro_f1"]*100:.4}')
+
+    print("-"*20)
 
