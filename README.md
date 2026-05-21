@@ -101,7 +101,7 @@ F1:        52.54
 Each metric reflects the performance of your predictions on the selected split and task.
 
 ## Organizers
-[Mohammed Elkholy]()
+[Mohammed Elkholy](https://ae.linkedin.com/in/moelkholy)
 
 [Khalid Elmadani](https://khalid-elmadani.github.io/)
 
