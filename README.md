@@ -68,7 +68,7 @@ To evaluate your system's output, you would need to run:
 `python scripts/eval.py --predictions /path/to/prediction_csv --task [PA|NP|NoPNX-PA|NoPNX-NP] --split [dev|test]` 
 
 Example usage:
-`python scripts/eval.py ` 
+`python scripts/eval.py --predictions examples/NoPnx-NP_dev.csv --task NoPnx-NP --split dev` 
 
 ### Prediction Output CSV Format
 Your output CSV file should have the following columns:
@@ -87,6 +87,15 @@ Make sure the IDs in your output file match exactly those in the provided split 
 ### Example Output
 After running the evaluation script, you will see output similar to the following in your terminal:
 ```
+--------------------
+Prediction file path: examples/NoPnx-NP_dev.csv
+Task name: NoPnx-NP
+Split: dev
+--------------------
+Precision: 43.19
+Recall:    88.19
+F1:        52.54
+--------------------
 ```
 Each metric reflects the performance of your predictions on the selected split and task.
 
