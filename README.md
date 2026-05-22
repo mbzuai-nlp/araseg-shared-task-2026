@@ -21,16 +21,17 @@ The shared task features **four** subtasks, each corresponding to an AraSeg corp
 
 * **Closed Track**: Models must be trained _exclusively_ on the AraSeg corpus.
 
-   * No-Punctuation No-Paragraph (NoPnx-NP) Segmentation: [CodaBench Link]()
-   * No-Punctuation Paragraph-Aware (NoPnx-PA) Segmentation: [CodaBench Link]()
-   * No-Paragraph (NP) Segmentation: [CodaBench Link]()
-   * Paragraph-Aware (PA) Segmentation: [CodaBench Link]()
-
+   * **Paragraph-Aware (PA) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16606/)
+   * **No-Punctuation Paragraph-Aware (NoPnx-PA) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16608/)
+   * **No-Paragraph (NP) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16610/)
+   * **No-Punctuation No-Paragraph (NoPnx-NP) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16612/)
+   
+   
 * **Open Track**: No restrictions on external resources, allowing the use of any publicly available data.
-   * No-Punctuation No-Paragraph (NoPnx-NP) Segmentation: [CodaBench Link]()
-   * No-Punctuation Paragraph-Aware (NoPnx-PA) Segmentation: [CodaBench Link]()
-   * No-Paragraph (NP) Segmentation: [CodaBench Link]()
-   * Paragraph-Aware (PA) Segmentation: [CodaBench Link]()
+   * **Paragraph-Aware (PA) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16607/)
+   * **No-Punctuation Paragraph-Aware (NoPnx-PA) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16609/)
+   * **No-Paragraph (NP) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16611/)
+   * **No-Punctuation No-Paragraph (NoPnx-NP) Segmentation**: [CodaBench Link](https://www.codabench.org/competitions/16613/)
 
 With four subtasks and two tracks, the task results in **eight** possible combinations. Participants are allowed to compete in multiple subtasks and tracks.
 
