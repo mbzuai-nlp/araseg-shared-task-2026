@@ -113,3 +113,6 @@ Each metric reflects the performance of your predictions on the selected split a
 ## License
 
 This repo is available under the MIT license. See the [LICENSE](LICENSE) for more info.
+
+## References
+[Arabic Sentence Segmentation Across Genres and Punctuation Conditions](https://arxiv.org/pdf/2606.08025). Mohammed Elkholy and Khalid N. Elmadani and Nizar Habash and Bashar Alhafni. arXiv Preprint.
